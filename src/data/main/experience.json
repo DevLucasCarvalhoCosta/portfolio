@@ -1,0 +1,70 @@
+[
+  {
+    "company": "Manto Sistemas",
+    "logo": "/experiences/Logo-Manto-Sistemas.jpg",
+    "title": {
+      "pt": "Programador Júnior N1",
+      "en": "Junior Developer N1"
+    },
+    "date": {
+      "pt": "Jun 2025 - o momento",
+      "en": "Jun 2025 - Present"
+    },
+    "description": {
+      "pt": "Atuação no desenvolvimento do ecossistema [[Manto Sistemas]], incluindo o [[ERP Litos]], [[Plataforma B2B]], [[Business Intelligence (BI)]], [[CRM interno]] e [[Integração de Mensagens]]. Desenvolvimento de [[interfaces responsivas]] e [[componentes reutilizáveis]] com [[React]], [[TypeScript]] e [[Ant Design]]. [[Integração com APIs RESTful]] e foco em [[performance]], [[usabilidade]] e [[boas práticas de código]].",
+      "en": "Working on the development of the [[Manto Sistemas]] ecosystem, including [[ERP Litos]], [[B2B Platform]], [[Business Intelligence (BI)]], [[internal CRM]], and [[Message Integration]]. Development of [[responsive interfaces]] and [[reusable components]] with [[React]], [[TypeScript]], and [[Ant Design]]. [[RESTful API integration]] with focus on [[performance]], [[usability]], and [[code best practices]]."
+    },
+    "skills": ["React", "TypeScript", "Ant Design", "APIs REST", "ERP", "B2B", "BI", "+"]
+  },
+  {
+    "company": "UEG - Universidade Estadual de Goiás",
+    "logo": "/experiences/Logo-UEG.png",
+    "title": {
+      "pt": "Gerente de Projeto & Desenvolvedor Full Stack",
+      "en": "Project Manager & Full Stack Developer"
+    },
+    "date": {
+      "pt": "Jan 2025 - Dez 2025",
+      "en": "Jan 2025 - Dec 2025"
+    },
+    "description": {
+      "pt": "[[Projeto acadêmico]] - Liderança completa no [[PatrimônioUEG|https://patrimonioueg.duckdns.org]], sistema de [[gestão patrimonial]]. Como [[gerente de projeto]]: [[alinhamento com stakeholders]], [[definição de requisitos]], [[cronograma de entregas]] e [[coordenação da equipe]]. Como [[desenvolvedor]]: [[arquitetura do sistema]], [[modelagem do banco]], [[API RESTful]] com autenticação [[JWT]], [[dashboard com estatísticas]], [[importação em lote]] e [[transferências patrimoniais]].",
+      "en": "[[Academic project]] - Full leadership on [[PatrimônioUEG|https://patrimonioueg.duckdns.org]], an [[asset management system]]. As [[project manager]]: [[stakeholder alignment]], [[requirements definition]], [[delivery schedule]], and [[team coordination]]. As [[developer]]: [[system architecture]], [[database modeling]], [[RESTful API]] with [[JWT]] authentication, [[statistics dashboard]], [[batch import]], and [[asset transfers]]."
+    },
+    "skills": ["Gestão", "React", "TypeScript", "Node.js", "PostgreSQL", "TypeORM", "JWT", "+"]
+  },
+  {
+    "company": "Freelancer",
+    "logo": "/experiences/Logo-Freelancer.jpg",
+    "title": {
+      "pt": "Desenvolvedor Full Stack",
+      "en": "Full Stack Developer"
+    },
+    "date": {
+      "pt": "2021 - 2023",
+      "en": "2021 - 2023"
+    },
+    "description": {
+      "pt": "Desenvolvimento de [[soluções práticas]], alinhando [[tecnologia]] às necessidades específicas de cada cliente. Atuação em [[análise de requisitos]], [[arquitetura de sistemas]] e [[implementação de aplicações web]]. Foco em [[resolver problemas reais]] através de [[sistemas personalizados]], [[automações]] e [[integrações]] que otimizam processos e aumentam a produtividade.",
+      "en": "Development of [[practical solutions]] for businesses, aligning [[technology]] with each client's specific needs. Experience in [[requirements analysis]], [[system architecture]], and [[web application development]]. Focus on [[solving real problems]] through [[custom systems]], [[automations]], and [[integrations]] that optimize processes and increase productivity."
+    },
+    "skills": ["Java", "Spring Boot", "JavaScript", "Python", "PostgreSQL", "APIs", "Automação", "+"]
+  },
+  {
+    "company": "SAS Com. Secos e Molhados (Rede Store)",
+    "logo": "/experiences/Logo-RedeStore.jpg",
+    "title": {
+      "pt": "Encarregado de CPD",
+      "en": "IT Data Center Manager"
+    },
+    "date": {
+      "pt": "Fev 2014 - Jun 2025",
+      "en": "Feb 2014 - Jun 2025"
+    },
+    "description": {
+      "pt": "Responsável pelo [[Centro de Processamento de Dados]] da rede de supermercados. [[Gerenciamento do sistema ERP]], garantindo integridade de dados de vendas, margens e estoque. [[Infraestrutura de TI]]: monitoramento de servidores, redes, PDVs, balanças e coletores. [[Manutenção preventiva e corretiva]] de computadores e equipamentos. [[Suporte técnico]] aos usuários e departamentos. [[Análise de dados]] e emissão de relatórios gerenciais.",
+      "en": "Responsible for the [[Data Processing Center]] of the supermarket chain. [[ERP system management]], ensuring data integrity for sales, margins, and inventory. [[IT Infrastructure]]: monitoring servers, networks, POS terminals, scales, and data collectors. [[Preventive and corrective maintenance]] of computers and equipment. [[Technical support]] to users and departments. [[Data analysis]] and management reports."
+    },
+    "skills": ["ERP", "Infraestrutura", "Redes", "Suporte TI", "Manutenção", "Análise de Dados", "Servidores", "+"]
+  }
+]

@@ -1,0 +1,80 @@
+{
+    "header": {
+        "logo": "LC",
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "skills": "Skills",
+        "education": "Education",
+        "contact": "Contact",
+        "tooltips": {
+            "colorPicker": "Choose theme color",
+            "language": "Change language",
+            "theme": "Toggle light/dark theme"
+        }
+    },
+    "colorPicker": {
+        "title": "Choose Your Theme",
+        "subtitle": "Pick your favorite color",
+        "ariaLabel": "Change theme color"
+    },
+    "hero": {
+        "greeting": "Hello, I am",
+        "role": "Full-Stack Developer",
+        "description": "Full-Stack Developer focused on building [[scalable]] and [[secure web applications]] using [[React]], [[TypeScript]], [[Node.js]], and [[relational databases]]. Solid experience in [[ERP systems]] and [[IT infrastructure management]]. [[Results-oriented]] profile with the ability to translate [[business needs]] into [[efficient technical solutions]].",
+        "viewProjects": "View Projects",
+        "downloadCv": "Download CV",
+        "yearsOld": "Years Old",
+        "location": "Goiânia, Brazil",
+        "adjectives": ["Full Stack", "Backend", "Frontend", "Creative", "Nerd"],
+        "yrsXp": "Yrs XP",
+        "visitors": "Visitors",
+        "coffees": "Coffees"
+    },
+    "techStack": {
+        "title": "Technologies & Tools",
+        "subtitle": "My preferred stack for building robust applications"
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "subtitle": "My journey in the tech industry"
+    },
+    "projects": {
+        "title": "Projects",
+        "subtitle": "Selected works showcasing my technical expertise",
+        "viewAll": "View All Projects"
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "Technologies and Tools",
+      "hoverHint": "Hover or tap over the skills to see details",
+      "core": "Core Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools",
+      "languages": "Languages"
+    },
+    "education": {
+        "title": "Education",
+        "subtitle": "My academic journey"
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Let's connect",
+        "cta": "Let's work together?",
+        "ctaDescription": "I'm always open to new opportunities and challenges. Get in touch and let's talk!",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "whatsapp": "Chat on WhatsApp"
+    },
+    "notFound": {
+        "title": "Page Not Found",
+        "description": "Oops! The page you're looking for doesn't exist or has been moved.",
+        "homeButton": "Back to Home",
+        "backButton": "Go Back",
+        "errorCode": "Error code"
+    }
+}

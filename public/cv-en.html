@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=210mm, initial-scale=1.0">
+  <title>CV - Lucas Carvalho Costa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #1a1a1a;
+      background: #f8f8f8;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    .cv-page {
+      width: 210mm;
+      height: 297mm;
+      padding: 10mm 12mm;
+      background: #f8f8f8;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      html, body {
+        width: 210mm;
+        height: 297mm;
+      }
+    }
+    
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #1a1a1a;
+    }
+    
+    .header-name h1 {
+      font-size: 28pt;
+      font-weight: 700;
+      line-height: 1.0;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+    
+    .header-name .title {
+      font-size: 11pt;
+      color: #666;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+    
+    .header-contact {
+      font-size: 10pt;
+      line-height: 1.8;
+    }
+    
+    .header-contact div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .header-contact .icon {
+      width: 16px;
+      text-align: center;
+    }
+    
+    .header-links {
+      font-size: 10pt;
+      line-height: 1.8;
+      text-align: right;
+    }
+    
+    .header-links div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    
+    .header-links a {
+      color: #1a1a1a;
+      text-decoration: underline;
+    }
+    
+    /* Sections */
+    .section {
+      margin-bottom: 10px;
+    }
+    
+    .section-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+    }
+    
+    .section-title .icon {
+      font-size: 14pt;
+    }
+    
+    /* Experience */
+    .experience-item {
+      display: flex;
+      margin-bottom: 8px;
+    }
+    
+    .experience-left {
+      width: 120px;
+      flex-shrink: 0;
+    }
+    
+    .experience-company {
+      font-weight: 600;
+      font-size: 10pt;
+      color: #1a1a1a;
+    }
+    
+    .experience-period {
+      font-size: 9pt;
+      color: #666;
+    }
+    
+    .experience-right {
+      flex: 1;
+      padding-left: 8px;
+    }
+    
+    .experience-role {
+      font-weight: 700;
+      font-size: 10pt;
+      margin-bottom: 3px;
+    }
+    
+    .experience-role .tag {
+      font-weight: 400;
+      color: #666;
+      font-size: 9pt;
+    }
+    
+    .experience-right ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      font-size: 9pt;
+      color: #333;
+      text-align: justify;
+    }
+    
+    .experience-right li {
+      margin-bottom: 1px;
+      padding-left: 12px;
+      position: relative;
+    }
+    
+    .experience-right li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #1a1a1a;
+    }
+    
+    /* Education */
+    .education-item {
+      margin-bottom: 5px;
+    }
+    
+    .education-title {
+      font-weight: 700;
+      font-size: 10pt;
+    }
+    
+    .education-period {
+      font-size: 8pt;
+      color: #666;
+    }
+    
+    /* Skills */
+    .skills-grid {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    
+    .skills-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 9pt;
+    }
+    
+    .skill-name {
+      width: 75px;
+    }
+    
+    .skill-stars {
+      letter-spacing: 1px;
+      font-size: 10pt;
+    }
+    
+    /* Certifications */
+    .certifications ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      font-size: 9pt;
+      color: #333;
+      text-align: justify;
+    }
+    
+    .certifications li {
+      margin-bottom: 2px;
+      padding-left: 12px;
+      position: relative;
+    }
+    
+    .certifications li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Languages */
+    .languages {
+      display: flex;
+      gap: 40px;
+      font-size: 9pt;
+    }
+    
+    /* Print Button */
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1a1a1a;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    
+    .print-btn:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn no-print" onclick="window.print()">💾 Save as PDF</button>
+  
+  <div class="cv-page">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-name">
+        <h1>LUCAS<br>CARVALHO COSTA</h1>
+        <p class="title">Full-Stack Developer</p>
+      </div>
+      
+      <div class="header-contact">
+        <div><span class="icon">📱</span> <span>+55 62 9 9539-0505</span></div>
+        <div><span class="icon">✉️</span> <span>dev.lucascarvalho@gmail.com</span></div>
+        <div><span class="icon">📍</span> <span>Goiânia, GO - Brazil</span></div>
+      </div>
+      
+      <div class="header-links">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> <a href="https://linkedin.com/in/devlucascarvalhocosta" target="_blank">Linkedin</a></div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#181717"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> <a href="https://github.com/DevLucasCarvalhoCosta" target="_blank">GitHub</a></div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <a href="https://www.lucascarvalho.net" target="_blank">Portfolio</a></div>
+      </div>
+    </header>
+    
+    <!-- Professional Experience -->
+    <section class="section">
+      <h2 class="section-title"><span class="icon">💼</span> PROFESSIONAL EXPERIENCE</h2>
+      
+      <div class="experience-item">
+        <div class="experience-left">
+          <p class="experience-company">Manto Sistemas</p>
+          <p class="experience-period">Jun 2025 – Present</p>
+        </div>
+        <div class="experience-right">
+          <p class="experience-role">Junior Programmer N1</p>
+          <ul>
+            <li><strong>Developed</strong> and maintained scalable web applications using TypeScript, JavaScript, and React.</li>
+            <li><strong>Worked</strong> across the Manto ecosystem: B2B Platform, Litos BI, CRM, and Litos Messages, integrated with Litos ERP.</li>
+            <li><strong>Participated</strong> in refactoring Litos ERP from embedded software to web version.</li>
+            <li><strong>Integrated</strong> RESTful APIs and third-party services to enhance functionalities.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="experience-item">
+        <div class="experience-left">
+          <p class="experience-company">UEG</p>
+          <p class="experience-period">Jan 2025 – Dec 2025</p>
+        </div>
+        <div class="experience-right">
+          <p class="experience-role">Project Manager & Full Stack Dev <span class="tag">(Extension Project)</span></p>
+          <ul>
+            <li><strong>Led</strong> PatrimônioUEG, an asset management system as a university extension project.</li>
+            <li><strong>Managed</strong> the project using Jira, Confluence, and Bitbucket (Atlassian ecosystem).</li>
+            <li><strong>Architected</strong> the system: RESTful API with JWT, dashboard with statistics, and batch import.</li>
+            <li><strong>Used</strong> React, TypeScript, Node.js, Express, TypeORM, and PostgreSQL.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="experience-item">
+        <div class="experience-left">
+          <p class="experience-company">SAS / Rede Store</p>
+          <p class="experience-period">Feb 2014 – Jun 2025</p>
+        </div>
+        <div class="experience-right">
+          <p class="experience-role">IT Department Manager</p>
+          <ul>
+            <li><strong>Operated</strong> the ERP system, ensuring data integrity and system functionality.</li>
+            <li><strong>Monitored</strong> servers, networks, POS terminals, scales, label printers, and collectors.</li>
+            <li><strong>Managed</strong> price uploads, scale configuration, and checkout systems.</li>
+            <li><strong>Provided</strong> technical support to users and resolved software and hardware issues.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="experience-item">
+        <div class="experience-left">
+          <p class="experience-company">Freelancer</p>
+          <p class="experience-period">2021 – 2023</p>
+        </div>
+        <div class="experience-right">
+          <p class="experience-role">Web Developer</p>
+          <ul>
+            <li><strong>Developed</strong> landing pages and institutional websites for clients.</li>
+            <li><strong>Automated</strong> processes through scripts and integrations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title"><span class="icon">🎓</span> EDUCATION</h2>
+      <div class="education-item">
+        <p class="education-title">Bachelor's in Information Systems, State University of Goiás</p>
+        <p class="education-period">January 2021 – Present (8th Semester)</p>
+      </div>
+      <div class="education-item">
+        <p class="education-title">Technical Degree in IT Maintenance and Support, SESI-SENAI</p>
+        <p class="education-period">2012 – 2014</p>
+      </div>
+    </section>
+    
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title"><span class="icon">&lt;/&gt;</span> SKILLS</h2>
+      <div class="skills-grid">
+        <div class="skills-column">
+          <div class="skill-item"><span class="skill-name">TypeScript</span> <span class="skill-stars">★★★★★</span></div>
+          <div class="skill-item"><span class="skill-name">JavaScript</span> <span class="skill-stars">★★★★★</span></div>
+          <div class="skill-item"><span class="skill-name">Java</span> <span class="skill-stars">★★★☆☆</span></div>
+          <div class="skill-item"><span class="skill-name">Python</span> <span class="skill-stars">★★★☆☆</span></div>
+          <div class="skill-item"><span class="skill-name">C/C++</span> <span class="skill-stars">★★★☆☆</span></div>
+          <div class="skill-item"><span class="skill-name">PHP</span> <span class="skill-stars">★★★☆☆</span></div>
+        </div>
+        <div class="skills-column">
+          <div class="skill-item"><span class="skill-name">React</span> <span class="skill-stars">★★★★★</span></div>
+          <div class="skill-item"><span class="skill-name">Next.js</span> <span class="skill-stars">★★★★☆</span></div>
+          <div class="skill-item"><span class="skill-name">Node.js</span> <span class="skill-stars">★★★★☆</span></div>
+          <div class="skill-item"><span class="skill-name">Express</span> <span class="skill-stars">★★★★☆</span></div>
+          <div class="skill-item"><span class="skill-name">NestJS</span> <span class="skill-stars">★★★☆☆</span></div>
+          <div class="skill-item"><span class="skill-name">TailwindCSS</span> <span class="skill-stars">★★★★★</span></div>
+        </div>
+        <div class="skills-column">
+          <div class="skill-item"><span class="skill-name">PostgreSQL</span> <span class="skill-stars">★★★★★</span></div>
+          <div class="skill-item"><span class="skill-name">MySQL</span> <span class="skill-stars">★★★★☆</span></div>
+          <div class="skill-item"><span class="skill-name">MongoDB</span> <span class="skill-stars">★★★☆☆</span></div>
+          <div class="skill-item"><span class="skill-name">Git</span> <span class="skill-stars">★★★★★</span></div>
+          <div class="skill-item"><span class="skill-name">Docker</span> <span class="skill-stars">★★★☆☆</span></div>
+          <div class="skill-item"><span class="skill-name">Linux</span> <span class="skill-stars">★★★★☆</span></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Certifications -->
+    <section class="section certifications">
+      <h2 class="section-title"><span class="icon">📜</span> CERTIFICATIONS</h2>
+      <ul>
+        <li>Oracle Cloud Data Management 2023 Certified Foundations Associate – Oracle (Jul 2023)</li>
+        <li>Oracle Cloud Infrastructure 2023 Certified Foundations Associate – Oracle (Jul 2023)</li>
+        <li>cPanel Professional Certification (CPP) – cPanel (Jul 2023)</li>
+      </ul>
+    </section>
+    
+    <!-- Languages -->
+    <section class="section">
+      <h2 class="section-title"><span class="icon">🗣️</span> LANGUAGES</h2>
+      <div class="languages">
+        <span>Portuguese - Native</span>
+        <span>English - Intermediate</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "core": [
+    { "name": "JavaScript", "icon": "SiJavascript", "sinceYear": 2022, "color": "#F7DF1E" },
+    { "name": "TypeScript", "icon": "SiTypescript", "sinceYear": 2022, "color": "#3178C6" },
+    { "name": "Java", "icon": "SiOpenjdk", "sinceYear": 2022, "color": "#ED8B00" },
+    { "name": "Python", "icon": "SiPython", "sinceYear": 2024, "color": "#3776AB" },
+    { "name": "PHP", "icon": "SiPhp", "sinceYear": 2022, "color": "#777BB4" },
+    { "name": "C/C++", "icon": "SiCplusplus", "sinceYear": 2022, "color": "#00599C" }
+  ],
+  "frontend": [
+    { "name": "React", "icon": "SiReact", "sinceYear": 2022, "color": "#61DAFB" },
+    { "name": "Next.js", "icon": "SiNextdotjs", "sinceYear": 2022, "color": "#000000" },
+    { "name": "Vue.js", "icon": "SiVuedotjs", "sinceYear": 2022, "color": "#4FC08D" },
+    { "name": "Vite", "icon": "SiVite", "sinceYear": 2022, "color": "#646CFF" },
+    { "name": "Ant Design", "icon": "SiAntdesign", "sinceYear": 2024, "color": "#0170FE" },
+    { "name": "TailwindCSS", "icon": "SiTailwindcss", "sinceYear": 2022, "color": "#06B6D4" },
+    { "name": "HTML5", "icon": "SiHtml5", "sinceYear": 2022, "color": "#E34F26" },
+    { "name": "CSS3", "icon": "SiCss", "sinceYear": 2022, "color": "#1572B6" }
+  ],
+  "backend": [
+    { "name": "Node.js", "icon": "SiNodedotjs", "sinceYear": 2022, "color": "#339933" },
+    { "name": "Express", "icon": "SiExpress", "sinceYear": 2022, "color": "#000000" },
+    { "name": "Spring Boot", "icon": "SiSpringboot", "sinceYear": 2022, "color": "#6DB33F" },
+    { "name": "NestJS", "icon": "SiNestjs", "sinceYear": 2024, "color": "#E0234E" },
+    { "name": "TypeORM", "icon": "SiTypeorm", "sinceYear": 2024, "color": "#FE0803" }
+  ],
+  "database": [
+    { "name": "PostgreSQL", "icon": "SiPostgresql", "sinceYear": 2022, "color": "#4169E1" },
+    { "name": "SQL Server", "icon": "SiMicrosoftsqlserver", "sinceYear": 2022, "color": "#CC2927" },
+    { "name": "MySQL", "icon": "SiMysql", "sinceYear": 2022, "color": "#4479A1" },
+    { "name": "MongoDB", "icon": "SiMongodb", "sinceYear": 2024, "color": "#47A248" }
+  ],
+  "tools": [
+    { "name": "Git", "icon": "SiGit", "sinceYear": 2022, "color": "#F05032" },
+    { "name": "GitHub", "icon": "SiGithub", "sinceYear": 2022, "color": "#181717" },
+    { "name": "Docker", "icon": "SiDocker", "sinceYear": 2024, "color": "#2496ED" },
+    { "name": "Nginx", "icon": "SiNginx", "sinceYear": 2024, "color": "#009639" },
+    { "name": "Linux", "icon": "SiLinux", "sinceYear": 2019, "color": "#FCC624" },
+    { 
+      "name": "Oracle Cloud", 
+      "icon": "SiOracle",
+      "sinceYear": 2023, 
+      "color": "#F80000" 
+    },
+    { 
+      "name": "AWS", 
+      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+      "sinceYear": 2023, 
+      "color": "#FF9900" 
+    },
+    { "name": "Bitbucket", "icon": "SiBitbucket", "sinceYear": 2024, "color": "#0052CC" },
+    { "name": "Postman", "icon": "SiPostman", "sinceYear": 2022, "color": "#FF6C37" },
+    { "name": "Hoppscotch", "icon": "SiHoppscotch", "sinceYear": 2025, "color": "#31C48D" },
+    { "name": "Obsidian", "icon": "SiObsidian", "sinceYear": 2024, "color": "#7C3AED" },
+    { "name": "CI/CD", "icon": "SiGithubactions", "sinceYear": 2024, "color": "#2088FF" },
+    { "name": "REST API", "icon": "SiSwagger", "sinceYear": 2022, "color": "#85EA2D" }
+  ],
+  "languages": [
+    { 
+      "name": "Português", 
+      "iconUrl": "https://flagcdn.com/br.svg",
+      "proficiency": "Nativo",
+      "color": "#009739"
+    },
+    { 
+      "name": "Inglês", 
+      "iconUrl": "https://flagcdn.com/us.svg",
+      "proficiency": "Intermediário",
+      "color": "#B22234"
+    }
+  ]
+}

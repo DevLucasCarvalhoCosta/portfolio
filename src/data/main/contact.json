@@ -1,0 +1,20 @@
+{
+  "email": {
+    "value": "dev.lucascarvalho@gmail.com",
+    "href": "mailto:dev.lucascarvalho@gmail.com"
+  },
+  "phone": {
+    "value": "+55 (62) 99539-0505",
+    "href": "tel:+5562995390505"
+  },
+  "location": {
+    "value": "Goiânia, GO - Brasil",
+    "href": "https://maps.google.com/?q=Goiânia, GO - Brasil"
+  },
+  "whatsapp": {
+    "href": {
+        "pt": "https://wa.me/5562995390505?text=Olá, vi seu portfólio e gostaria de conversar!",
+        "en": "https://wa.me/5562995390505?text=Hi, I saw your portfolio and I would like to chat!"
+    }
+  }
+}

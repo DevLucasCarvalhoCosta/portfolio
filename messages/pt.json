@@ -1,0 +1,79 @@
+{
+    "header": {
+        "logo": "LC",
+        "home": "Início",
+        "experience": "Experiência",
+        "projects": "Projetos",
+        "skills": "Habilidades",
+        "education": "Educação",
+        "contact": "Contato",
+        "tooltips": {
+            "colorPicker": "Escolher cor do tema",
+            "language": "Alterar idioma",
+            "theme": "Alternar tema claro/escuro"
+        }
+    },
+    "colorPicker": {
+        "title": "Escolha Seu Tema",
+        "subtitle": "Escolha sua cor favorita",
+        "ariaLabel": "Alterar cor do tema"
+    },
+    "hero": {
+        "greeting": "Olá, me chamo",
+        "role": "Desenvolvedor Full-Stack",
+        "description": "Desenvolvedor Full-Stack focado em criar [[aplicações web escaláveis]] e [[seguras]] utilizando [[React]], [[TypeScript]], [[Node.js]] e [[bancos de dados relacionais]]. Experiência sólida em [[sistemas ERP]] e [[gestão de infraestrutura de TI]]. Perfil orientado a [[resultados]], com capacidade de traduzir [[necessidades de negócio]] em [[soluções técnicas eficientes]].",
+        "viewProjects": "Ver Projetos",
+        "downloadCv": "Baixar CV",
+        "yearsOld": "Anos",
+        "location": "Goiânia, GO",
+        "adjectives": ["Full Stack", "Backend", "Frontend", "Criativo", "Nerd"],
+        "yrsXp": "Anos XP",
+        "visitors": "Visitas",
+        "coffees": "Cafés"
+    },
+    "techStack": {
+        "title": "Tecnologias & Ferramentas",
+        "subtitle": "Minha stack preferida para desenvolver aplicações robustas"
+    },
+    "experience": {
+        "title": "Experiência Profissional",
+        "subtitle": "Minha jornada na indústria de tecnologia"
+    },
+    "projects": {
+        "title": "Projetos",
+        "subtitle": "Trabalhos selecionados apresentando minha expertise técnica",
+        "viewAll": "Ver Todos os Projetos"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle": "Tecnologias e Ferramentas",
+      "hoverHint": "Passe o mouse sobre ou toque as habilidades para ver detalhes",
+      "core": "Linguagens Core",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Banco de Dados",
+      "tools": "Ferramentas",
+      "languages": "Idiomas"
+    },
+    "education": {
+        "title": "Educação",
+        "subtitle": "Minha jornada acadêmica"
+    },
+    "contact": {
+        "title": "Contato",
+        "subtitle": "Vamos nos conectar",
+        "cta": "Vamos trabalhar juntos?",
+        "ctaDescription": "Estou sempre aberto a novas oportunidades e desafios. Entre em contato e vamos conversar!",
+        "email": "Email",
+        "phone": "Telefone",
+        "location": "Localização",
+        "whatsapp": "Fale Comigo no WhatsApp"
+    },
+    "notFound": {
+        "title": "Página Não Encontrada",
+        "description": "Ops! A página que você está procurando não existe ou foi movida.",
+        "homeButton": "Voltar para Home",
+        "backButton": "Voltar",
+        "errorCode": "Código de erro"
+    }
+}

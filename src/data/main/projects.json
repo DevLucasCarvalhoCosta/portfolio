@@ -1,0 +1,114 @@
+[
+  {
+    "title": {
+      "pt": "PatrimônioUEG - Sistema de Gestão Patrimonial",
+      "en": "PatrimônioUEG - Asset Management System"
+    },
+    "description": {
+      "pt": "Sistema completo de [[gestão patrimonial]] para a UEG. Inclui [[dashboard interativo]] com gráficos, [[CRUD de bens]], [[transferências entre setores]], [[importação de dados]] via PDF e Open Data API, [[relatórios PDF/Excel]], [[controle de acesso JWT]] e [[tema claro/escuro]]. [[Infraestrutura configurada do zero]] com VM, Nginx, Docker e CI/CD. [[Demo]]: admin@patrimonioueg.com.br / admin123",
+      "en": "Complete [[asset management system]] for UEG. Includes [[interactive dashboard]] with charts, [[asset CRUD]], [[sector transfers]], [[data import]] via PDF and Open Data API, [[PDF/Excel reports]], [[JWT access control]] and [[light/dark theme]]. [[Infrastructure configured from scratch]] with VM, Nginx, Docker and CI/CD. [[Demo]]: admin@patrimonioueg.com.br / admin123"
+    },
+    "image": "/projects/Patrimonioueg.png",
+    "technologies": ["React", "TypeScript", "Node.js", "Express", "TypeORM", "PostgreSQL", "Docker", "Nginx"],
+    "githubUrl": "https://github.com/DevLucasCarvalhoCosta/patrimonioueg",
+    "liveUrl": "https://patrimonioueg.duckdns.org"
+  },
+  {
+    "title": {
+      "pt": "Bacias Hidrográficas - Monitoramento de Recursos Hídricos",
+      "en": "Hydrographic Basins - Water Resources Monitoring"
+    },
+    "description": {
+      "pt": "[[🎓 TCC em desenvolvimento]] - Sistema de [[monitoramento de bacias hidrográficas]] com integração à [[API da ANA]]. Inclui [[mapa interativo]] com Leaflet, [[dashboard analítico]] com 6 abas (Visão Geral, Séries, Comparações, Alertas, Dados, Agregados), [[15+ métricas estatísticas]], [[sistema de insights inteligentes]] com detecção de padrões, [[sincronização automática]] e [[exportação de relatórios]]. Orientador: Prof. Dr. Rafael Vianna de Carvalho.",
+      "en": "[[🎓 Thesis project in development]] - [[Hydrographic basin monitoring]] system with [[ANA API]] integration. Includes [[interactive map]] with Leaflet, [[analytical dashboard]] with 6 tabs (Overview, Series, Comparisons, Alerts, Data, Aggregates), [[15+ statistical metrics]], [[intelligent insights system]] with pattern detection, [[automatic synchronization]] and [[report export]]. Advisor: Prof. Dr. Rafael Vianna de Carvalho."
+    },
+    "image": "/projects/AnaHidro.png",
+    "technologies": ["React", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL", "Leaflet", "Recharts"],
+    "githubUrl": "https://github.com/DevLucasCarvalhoCosta/BaciaHidrograficas",
+    "liveUrl": "https://anahidro.duckdns.org"
+  },
+  {
+    "title": {
+      "pt": "WineBrain-SAD - Sistema de Apoio à Decisão",
+      "en": "WineBrain-SAD - Decision Support System"
+    },
+    "description": {
+      "pt": "Sistema de [[Apoio à Decisão Inteligente]] para [[Gestão de Clientes]]. Combina [[Machine Learning]] e [[regras de negócio]] em 4 modelos de decisão: [[Descritivo]], [[Preditivo]], [[Prescritivo]] e [[Simulativo]]. Utiliza [[Random Forest]] com ~95% de acurácia para [[predição de churn]], motor com [[6 regras de negócio]] e [[dashboard com KPIs]] em tempo real.",
+      "en": "[[Intelligent Decision Support System]] for [[Customer Management]]. Combines [[Machine Learning]] and [[business rules]] in 4 decision models: [[Descriptive]], [[Predictive]], [[Prescriptive]] and [[Simulative]]. Uses [[Random Forest]] with ~95% accuracy for [[churn prediction]], engine with [[6 business rules]] and [[real-time KPI dashboard]]."
+    },
+    "image": "/projects/WineBrain.png",
+    "technologies": ["Python", "FastAPI", "Scikit-learn", "React", "Vite", "Tailwind CSS", "Machine Learning"],
+    "githubUrl": "https://github.com/DevLucasCarvalhoCosta/winebrain-sad",
+    "liveUrl": "https://winebrain.duckdns.org"
+  },
+  {
+    "title": {
+      "pt": "Estresse - Sistema de Bem-estar no Trabalho",
+      "en": "Stress - Workplace Well-being System"
+    },
+    "description": {
+      "pt": "Sistema para [[análise de bem-estar]] e [[satisfação no trabalho]]. Utiliza 3 escalas validadas cientificamente: [[SWLS]] (Satisfação com a Vida), [[UWES]] (Engajamento no Trabalho) e [[EST]] (Satisfação no Trabalho). Inclui [[formulário interativo]] passo a passo, [[dashboard analítico]] com gauges customizados, [[gráficos Plotly]] e [[banco PostgreSQL]]. Deploy com [[Docker]] e [[CI/CD]].",
+      "en": "System for [[well-being analysis]] and [[job satisfaction]]. Uses 3 scientifically validated scales: [[SWLS]] (Life Satisfaction), [[UWES]] (Work Engagement) and [[EST]] (Job Satisfaction). Includes step-by-step [[interactive form]], [[analytical dashboard]] with custom gauges, [[Plotly charts]] and [[PostgreSQL database]]. Deploy with [[Docker]] and [[CI/CD]]."
+    },
+    "image": "/projects/estresse.png",
+    "technologies": ["Python", "Dash", "Plotly", "Flask", "SQLAlchemy", "PostgreSQL", "Docker", "Gunicorn"],
+    "githubUrl": "https://github.com/DevLucasCarvalhoCosta/estresse",
+    "liveUrl": "https://estresse.duckdns.org/home"
+  },
+  {
+    "title": {
+      "pt": "AutoStock - Controle de Estoque Automotivo",
+      "en": "AutoStock - Automotive Inventory Control"
+    },
+    "description": {
+      "pt": "Sistema de [[controle de estoque]] especializado em [[peças automotivas]]. Backend com [[Spring Boot]] e [[Spring Security JWT]] para autenticação. Permite [[cadastro de peças]] (nome, descrição, classificação, quantidade, preço, fabricante), [[controle de entrada/saída]], [[relatórios de movimentação]] e [[alertas de estoque baixo]].",
+      "en": "[[Inventory control]] system specialized in [[automotive parts]]. Backend with [[Spring Boot]] and [[Spring Security JWT]] for authentication. Allows [[parts registration]] (name, description, classification, quantity, price, manufacturer), [[entry/exit control]], [[movement reports]] and [[low stock alerts]]."
+    },
+    "image": "/projects/AutoStock.png",
+    "technologies": ["Java", "Spring Boot", "Spring Security", "TypeScript", "React", "PostgreSQL", "JWT"],
+    "githubUrl": "https://github.com/DevLucasCarvalhoCosta/autostock",
+    "liveUrl": ""
+  },
+  {
+    "title": {
+      "pt": "BookLender - Sistema de Empréstimo de Livros",
+      "en": "BookLender - Book Lending System"
+    },
+    "description": {
+      "pt": "Sistema de [[gerenciamento de empréstimos de livros]] com [[Spring Boot]] e [[PostgreSQL]]. Entidades completas: [[Livro]], [[Usuário]] e [[Empréstimo]]. Inclui [[CRUD completo]], [[controle de devoluções]], [[diagramas UML]] (Classes, ER, Sequência, Implantação) e [[testes automatizados]] com JUnit 5 e Mockito.",
+      "en": "[[Book lending management system]] with [[Spring Boot]] and [[PostgreSQL]]. Complete entities: [[Book]], [[User]] and [[Loan]]. Includes [[complete CRUD]], [[return control]], [[UML diagrams]] (Class, ER, Sequence, Deployment) and [[automated tests]] with JUnit 5 and Mockito."
+    },
+    "image": "/projects/BookLender.png",
+    "technologies": ["Java", "Spring Boot", "PostgreSQL", "JUnit 5", "Mockito", "Maven"],
+    "githubUrl": "https://github.com/DevLucasCarvalhoCosta/booklender",
+    "liveUrl": ""
+  },
+  {
+    "title": {
+      "pt": "TaskFlow - Gerenciador de Tarefas Kanban",
+      "en": "TaskFlow - Kanban Task Manager"
+    },
+    "description": {
+      "pt": "Aplicação [[full-stack]] de [[gerenciamento de tarefas]] com [[quadro Kanban]]. Backend: Node.js, TypeScript, Express, MySQL, [[Prisma ORM]], JWT e bcryptjs. Frontend: React, TypeScript, [[Ant Design]], drag-and-drop com @hello-pangea/dnd. Recursos: [[tema claro/escuro]], [[arrastar e soltar]], [[prioridades]] e [[status de progresso]].",
+      "en": "[[Full-stack]] [[task management]] application with [[Kanban board]]. Backend: Node.js, TypeScript, Express, MySQL, [[Prisma ORM]], JWT and bcryptjs. Frontend: React, TypeScript, [[Ant Design]], drag-and-drop with @hello-pangea/dnd. Features: [[light/dark theme]], [[drag and drop]], [[priorities]] and [[progress status]]."
+    },
+    "image": "/projects/TaskFlow.png",
+    "technologies": ["TypeScript", "React", "Node.js", "Express", "Prisma", "MySQL", "Ant Design", "JWT"],
+    "githubUrl": "https://github.com/DevLucasCarvalhoCosta/Gerenciador-de-Tarefas",
+    "liveUrl": ""
+  },
+  {
+    "title": {
+      "pt": "Clínica - Sistema de Gerenciamento Médico",
+      "en": "Clinic - Medical Management System"
+    },
+    "description": {
+      "pt": "Sistema completo de [[gerenciamento de clínica]] com [[Spring Boot 3.3.5]] no backend e [[Vue.js]] no frontend. Entidades: [[Paciente]], [[Médico]] e [[Consulta]] com relacionamentos 1:N e N:M. Inclui [[cadastro de pacientes]], [[agendamento de consultas]], [[gestão de médicos]], [[API RESTful]] com CORS e [[PostgreSQL]].",
+      "en": "Complete [[clinic management system]] with [[Spring Boot 3.3.5]] backend and [[Vue.js]] frontend. Entities: [[Patient]], [[Doctor]] and [[Appointment]] with 1:N and N:M relationships. Includes [[patient registration]], [[appointment scheduling]], [[doctor management]], [[RESTful API]] with CORS and [[PostgreSQL]]."
+    },
+    "image": "/projects/Clinica.png",
+    "technologies": ["Java", "Spring Boot", "Vue.js", "PostgreSQL", "REST API", "CORS"],
+    "githubUrl": "https://github.com/DevLucasCarvalhoCosta/Clinica",
+    "liveUrl": ""
+  }
+]

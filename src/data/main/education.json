@@ -1,0 +1,52 @@
+[
+  {
+    "institution": "UEG - Universidade Estadual de Goiás",
+    "logo": "/experiences/Logo-UEG.png",
+    "degree": {
+      "pt": "Bacharelado",
+      "en": "Bachelor's Degree"
+    },
+    "field": {
+      "pt": "Sistemas de Informação",
+      "en": "Information Systems"
+    },
+    "date": {
+      "pt": "2020 - Atual (8º Período)",
+      "en": "2020 - Present (8th Semester)"
+    },
+    "status": {
+      "pt": "Cursando",
+      "en": "Ongoing"
+    },
+    "description": {
+      "pt": "Graduação em [[Sistemas de Informação]] com foco em [[desenvolvimento de software]], [[estruturas de dados]], [[algoritmos]], [[banco de dados]] e [[arquitetura de sistemas]]. O curso proporciona uma base sólida em [[programação]], [[análise de sistemas]] e [[tecnologias emergentes]]. Desenvolvimento de projetos reais como o [[PatrimônioUEG]].",
+      "en": "[[Information Systems degree]] focused on [[software development]], [[data structures]], [[algorithms]], [[databases]] and [[systems architecture]]. The program provides a solid foundation in [[programming]], [[systems analysis]] and [[emerging technologies]]. Development of real projects like [[PatrimônioUEG]]."
+    },
+    "skills": ["Java", "Python", "JavaScript", "PostgreSQL", "Estruturas de dados", "Algoritmos", "Arquitetura"]
+  },
+  {
+    "institution": "SESI-SENAI",
+    "logo": "/experiences/SesiSenai.jpg",
+    "degree": {
+      "pt": "Técnico",
+      "en": "Technical Degree"
+    },
+    "field": {
+      "pt": "Manutenção e Suporte em Informática",
+      "en": "IT Maintenance and Support"
+    },
+    "date": {
+      "pt": "2014",
+      "en": "2014"
+    },
+    "status": {
+      "pt": "Concluído",
+      "en": "Completed"
+    },
+    "description": {
+      "pt": "Curso técnico com ênfase em [[manutenção de hardware]], [[suporte técnico]], [[redes de computadores]] e [[sistemas operacionais]]. Base sólida para a carreira em [[desenvolvimento de software]] e [[suporte de sistemas]].",
+      "en": "Technical course with emphasis on [[hardware maintenance]], [[technical support]], [[computer networks]] and [[operating systems]]. Solid foundation for a career in [[IT infrastructure]] and [[system administration]]."
+    },
+    "skills": ["Redes", "Hardware", "Suporte Técnico", "Windows", "Linux", "Manutenção"]
+  }
+]

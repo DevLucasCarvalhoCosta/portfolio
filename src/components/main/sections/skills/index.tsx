@@ -9,6 +9,7 @@ import { Code2, Database, Server, Wrench, MousePointerClick, Languages, FileCode
 import { SectionHeader } from "@/components/utils/section-header";
 import { WaveDivider } from "@/components/ui/wave-divider";
 import { Meteors } from "@/components/ui/meteors";
+import { Spotlight } from "@/components/ui/spotlight";
 
 import { SkillCard } from "./skill-card";
 
@@ -55,7 +56,11 @@ export function SkillsSection() {
         <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background" />
       </div>
 
-      <div className="w-full px-4 md:px-8">
+      <Spotlight 
+        className="w-full px-4 md:px-8"
+        spotlightSize={600}
+        spotlightOpacity={0.06}
+      >
         <div className="container max-w-7xl mx-auto relative z-10">
           <SectionHeader 
             title={t("title")} 
@@ -92,7 +97,7 @@ export function SkillsSection() {
             })}
           </div>
         </div>
-      </div>
+      </Spotlight>
     </section>
   );
 }

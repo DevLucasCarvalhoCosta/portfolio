@@ -1,17 +1,18 @@
 "use client";
 
-import { motion, MotionProps, useScroll, useSpring } from "motion/react";
+import { memo, type HTMLAttributes, type Ref } from "react";
+import { motion, MotionProps, useScroll, useSpring } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
 interface ScrollProgressProps extends Omit<
-  React.HTMLAttributes<HTMLElement>,
+  HTMLAttributes<HTMLElement>,
   keyof MotionProps
 > {
-  ref?: React.Ref<HTMLDivElement>;
+  ref?: Ref<HTMLDivElement>;
 }
 
-export function ScrollProgress({
+function ScrollProgressInner({
   className,
   ref,
   ...props
@@ -19,9 +20,10 @@ export function ScrollProgress({
   const { scrollYProgress } = useScroll();
   
   const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
+    stiffness: 120,
+    damping: 35,
     restDelta: 0.001,
+    restSpeed: 0.001,
   });
 
   return (
@@ -33,8 +35,12 @@ export function ScrollProgress({
       )}
       style={{
         scaleX,
+        willChange: "transform",
+        backfaceVisibility: "hidden",
       }}
       {...props}
     />
   );
 }
+
+export const ScrollProgress = memo(ScrollProgressInner);

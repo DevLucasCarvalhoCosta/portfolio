@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useRef } from "react"
+import { memo, useCallback, useEffect, useRef } from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -96,23 +96,27 @@ interface MorphingTextProps {
   texts: string[]
 }
 
-const Texts: React.FC<Pick<MorphingTextProps, "texts">> = ({ texts }) => {
+const Texts: React.FC<Pick<MorphingTextProps, "texts">> = memo(({ texts }) => {
   const { text1Ref, text2Ref } = useMorphingText(texts)
   return (
     <>
       <span
-        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
+        className="absolute inset-x-0 top-0 m-auto inline-block w-full will-change-[filter,opacity]"
         ref={text1Ref}
+        style={{ backfaceVisibility: "hidden", transform: "translateZ(0)" }}
       />
       <span
-        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
+        className="absolute inset-x-0 top-0 m-auto inline-block w-full will-change-[filter,opacity]"
         ref={text2Ref}
+        style={{ backfaceVisibility: "hidden", transform: "translateZ(0)" }}
       />
     </>
   )
-}
+})
 
-export const MorphingText: React.FC<MorphingTextProps> = ({
+Texts.displayName = "Texts"
+
+export const MorphingText: React.FC<MorphingTextProps> = memo(({
   texts,
   className,
 }) => (
@@ -121,7 +125,10 @@ export const MorphingText: React.FC<MorphingTextProps> = ({
       "relative mx-auto h-16 w-full text-center font-sans font-bold leading-none",
       className
     )}
+    style={{ contain: "layout style" }}
   >
     <Texts texts={texts} />
   </div>
-)
+))
+
+MorphingText.displayName = "MorphingText"

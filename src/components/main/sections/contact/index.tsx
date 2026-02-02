@@ -9,6 +9,7 @@ import { HighlightedText } from "@/lib/highlight-parser";
 import { SectionHeader } from "@/components/utils/section-header";
 import { AmbientLight } from "@/components/ui/ambient-light";
 import { SocialLinks } from "@/components/ui/social-links";
+import { MagneticButton } from "@/components/ui/magnetic-button";
 import contactData from "@/data/main/contact.json";
 import { Highlighter } from "@/components/ui/highlighter";
 
@@ -101,16 +102,18 @@ export function ContactSection() {
           >
             <SocialLinks variant="button" iconSize="lg" className="gap-8" />
 
-            <Link
+            <MagneticButton
+              as="a"
               href={contactData.whatsapp.href[locale]}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-foreground text-background rounded-full font-bold text-xl hover:scale-105 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 group relative overflow-hidden"
+              magneticStrength={0.4}
+              className="inline-flex items-center gap-3 px-10 py-5 bg-foreground text-background rounded-full font-bold text-xl hover:shadow-xl hover:shadow-primary/20 transition-shadow duration-300 group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               <SiWhatsapp className="w-7 h-7 text-[#25D366] group-hover:text-background transition-colors" />
               <span>{t("whatsapp")}</span>
-            </Link>
+            </MagneticButton>
           </motion.div>
         </div>
       </div>

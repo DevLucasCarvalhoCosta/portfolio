@@ -30,7 +30,9 @@
         "adjectives": ["Full Stack", "Backend", "Frontend", "Creative", "Nerd"],
         "yrsXp": "Yrs XP",
         "visitors": "Visitors",
-        "coffees": "Coffees"
+        "coffees": "Coffees",
+        "available": "Available",
+        "projects": "Projects"
     },
     "techStack": {
         "title": "Technologies & Tools",

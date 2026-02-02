@@ -2,7 +2,7 @@ import { ExperienceSection } from "@/components/main/sections/experiences";
 import { EducationSection } from "@/components/main/sections/education";
 import { ProjectsSection } from "@/components/main/sections/projects";
 import { ContactSection } from "@/components/main/sections/contact";
-import { SkillsSection } from "@/components/main/sections/skills";
+import { SkillsSectionOrbit } from "@/components/main/sections/skills/skills-orbit";
 import { HeroSection } from "@/components/main/sections/hero";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <ExperienceSection />
       <ProjectsSection />
-      <SkillsSection />
+      <SkillsSectionOrbit />
       <EducationSection />
       <ContactSection />
     </div>

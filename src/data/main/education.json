@@ -22,7 +22,7 @@
       "pt": "Graduação em [[Sistemas de Informação]] com foco em [[desenvolvimento de software]], [[estruturas de dados]], [[algoritmos]], [[banco de dados]] e [[arquitetura de sistemas]]. O curso proporciona uma base sólida em [[programação]], [[análise de sistemas]] e [[tecnologias emergentes]]. Desenvolvimento de projetos reais como o [[PatrimônioUEG]].",
       "en": "[[Information Systems degree]] focused on [[software development]], [[data structures]], [[algorithms]], [[databases]] and [[systems architecture]]. The program provides a solid foundation in [[programming]], [[systems analysis]] and [[emerging technologies]]. Development of real projects like [[PatrimônioUEG]]."
     },
-    "skills": ["Java", "Python", "JavaScript", "PostgreSQL", "Estruturas de dados", "Algoritmos", "Arquitetura"]
+    "skills": ["C/C++", "Java", "Python", "JavaScript", "PostgreSQL", "Estruturas de dados", "Design Patterns", "IA", "Arquitetura"]
   },
   {
     "institution": "SESI-SENAI",

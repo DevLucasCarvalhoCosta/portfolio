@@ -17,6 +17,8 @@ import { ConsoleArt } from "@/components/ui/console-art";
 import { Footer } from "@/components/main/utils/footer";
 import { PreloadSkillsIcons } from "@/components/utils/preload-skills-icons";
 import { PixelatedText } from "@/components/ui/pixelated-text";
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
+import { GrainEffect } from "@/components/ui/grain-effect";
 
 import "../styles/reduced-motion.css";
 import "../styles/globals.css";
@@ -65,20 +67,11 @@ export const metadata: Metadata = {
     siteName: 'Lucas Carvalho - Portfolio',
     title: 'Lucas Carvalho | Desenvolvedor Full-Stack',
     description: 'Desenvolvedor Full-Stack com experiência em todo o ciclo de desenvolvimento. Especializado em React, TypeScript, Node.js e bancos de dados.',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Lucas Carvalho - Desenvolvedor Full-Stack',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Lucas Carvalho | Desenvolvedor Full-Stack',
     description: 'Desenvolvedor Full-Stack com mais de 12 anos de experiência. Especialista em React, Next.js, Node.js, Java e Spring Boot.',
-    images: ['/opengraph-image.png'],
     creator: '@devlucascarvalho',
   },
   robots: {
@@ -135,26 +128,29 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <SpeedInsights />
-            <PreloadSkillsIcons />
-            <MotionConfig reducedMotion="user">
-              <ConsoleArt />
-              <ScrollProgress />
-              <Header />
-              {children}
-              <Footer />
-              <div className="w-full bg-background/50 border-t border-border/20 py-4 md:py-6">
-                <PixelatedText
-                  text="LUCAS"
-                  className="w-full max-w-6xl mx-auto px-4"
-                  gridSize={14}
-                  dotSize={2.5}
-                  textOpacity={0.45}
-                  bgOpacity={0.06}
-                />
-              </div>
-              <BackToTop />
-            </MotionConfig>
+            <SmoothScroll>
+              <GrainEffect opacity={0.02} />
+              <SpeedInsights />
+              <PreloadSkillsIcons />
+              <MotionConfig reducedMotion="user">
+                <ConsoleArt />
+                <ScrollProgress />
+                <Header />
+                {children}
+                <Footer />
+                <div className="w-full bg-background/50 border-t border-border/20 py-4 md:py-6">
+                  <PixelatedText
+                    text="LUCAS"
+                    className="w-full max-w-6xl mx-auto px-4"
+                    gridSize={14}
+                    dotSize={2.5}
+                    textOpacity={0.45}
+                    bgOpacity={0.06}
+                  />
+                </div>
+                <BackToTop />
+              </MotionConfig>
+            </SmoothScroll>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

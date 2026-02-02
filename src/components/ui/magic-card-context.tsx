@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, useState, useRef, useCallback } from "react"
+import { createContext, useContext, useState, useRef, useCallback, useEffect, type ReactNode, type RefObject } from "react"
 
 interface MousePosition {
   x: number
@@ -9,18 +9,47 @@ interface MousePosition {
 
 interface MagicCardContextType {
   mousePosition: MousePosition
-  containerRef: React.RefObject<HTMLDivElement | null>
+  containerRef: RefObject<HTMLDivElement | null>
 }
 
 const MagicCardContext = createContext<MagicCardContextType | undefined>(undefined)
 
-export function MagicCardProvider({ children }: { children: React.ReactNode }) {
+function useRAFThrottle() {
+  const rafRef = useRef<number | null>(null);
+  const pendingValueRef = useRef<MousePosition | null>(null);
+  
+  const scheduleUpdate = useCallback((value: MousePosition, setter: (value: MousePosition) => void) => {
+    pendingValueRef.current = value;
+    
+    if (rafRef.current === null) {
+      rafRef.current = requestAnimationFrame(() => {
+        if (pendingValueRef.current) {
+          setter(pendingValueRef.current);
+        }
+        rafRef.current = null;
+      });
+    }
+  }, []);
+  
+  useEffect(() => {
+    return () => {
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
+  }, []);
+  
+  return scheduleUpdate;
+}
+
+export function MagicCardProvider({ children }: { children: ReactNode }) {
   const [mousePosition, setMousePosition] = useState<MousePosition>({ x: -999, y: -999 })
   const containerRef = useRef<HTMLDivElement>(null)
+  const scheduleUpdate = useRAFThrottle();
 
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    setMousePosition({ x: e.clientX, y: e.clientY })
-  }, [])
+    scheduleUpdate({ x: e.clientX, y: e.clientY }, setMousePosition);
+  }, [scheduleUpdate])
 
   const handleMouseLeave = useCallback(() => {
     setMousePosition({ x: -999, y: -999 })

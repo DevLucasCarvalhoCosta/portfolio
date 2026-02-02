@@ -30,6 +30,7 @@ interface SkillCardProps {
 interface SkillItemProps {
   skill: Skill;
   cardIndex: number;
+  isVisible: boolean;
 }
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -44,7 +45,7 @@ const getYears = (skill: Skill): number => {
   return 0;
 };
 
-const SkillItem = ({ skill, cardIndex }: SkillItemProps) => {
+const SkillItem = ({ skill, cardIndex, isVisible }: SkillItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useMobile();
 
@@ -71,6 +72,7 @@ const SkillItem = ({ skill, cardIndex }: SkillItemProps) => {
         className="absolute inset-0 opacity-0 group-hover/badge:opacity-20 dark:group-hover/badge:opacity-15 transition-opacity duration-200 pointer-events-none"
         style={{ backgroundColor: color }}
       />
+      
       <div className="relative z-10 flex items-center gap-3">
         {skill.iconSvg ? (
           <span
@@ -221,11 +223,12 @@ export function SkillCard({ title, skills, icon: Icon, index }: SkillCardProps) 
         </div>
 
         <div className="flex flex-wrap gap-4 flex-1">
-          {skills.slice(0, visibleSkillsCount).map((skill) => (
+          {skills.slice(0, visibleSkillsCount).map((skill, skillIndex) => (
             <SkillItem
               key={skill.name}
               skill={skill}
               cardIndex={index}
+              isVisible={skillIndex < visibleSkillsCount}
             />
           ))}
         </div>

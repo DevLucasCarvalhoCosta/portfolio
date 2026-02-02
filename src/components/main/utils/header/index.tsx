@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useMotionValueEvent, useScroll } from "motion/react";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 import { DesktopHeader } from "./desktop-header";

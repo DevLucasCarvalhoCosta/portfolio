@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+import type { MouseEvent } from "react";
 
 interface AnimatedTabsProps {
   item: { href: string; label: string };
@@ -20,7 +21,7 @@ export const AnimatedTabs = ({
   layoutId = "tab-hover",
   isScrollingToSectionRef,
 }: AnimatedTabsProps) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setSelected(item.href);
     

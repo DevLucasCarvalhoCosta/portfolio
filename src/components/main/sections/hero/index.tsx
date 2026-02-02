@@ -1,15 +1,16 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Download, ArrowRight, ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { useTranslations, useLocale } from "next-intl";
 
 import { cn } from "@/lib/utils";
-import { SocialLinks } from "@/components/ui/social-links"; 
+import { SocialLinks } from "@/components/ui/social-links";
+import { SplitText } from "@/components/ui/split-text";
 
-import { HighlightedText } from "@/lib/highlight-parser"; 
+import { HighlightedText } from "@/lib/highlight-parser";
 
 import { AuroraBackground } from "./backgrounds/aurora";
 import { HeroCard } from "./card";
@@ -23,7 +24,7 @@ export const HeroSection = () => {
     const checkHeight = () => {
       setIsShortHeight(window.innerHeight < 800);
     };
-    
+
     checkHeight();
     window.addEventListener("resize", checkHeight);
     return () => window.removeEventListener("resize", checkHeight);
@@ -48,37 +49,68 @@ export const HeroSection = () => {
       <AuroraBackground />
 
       <div className={cn("container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-6 lg:gap-10 xl:gap-16 items-center relative z-10 flex-1 py-2 md:py-1 lg:py-0", isShortHeight && "gap-4 lg:gap-6")}>
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+        <div
           className={cn("flex flex-col items-start text-left space-y-6 md:space-y-8 lg:space-y-8 xl:space-y-10", isShortHeight && "space-y-2 md:space-y-2 lg:space-y-3")}
         >
           <div className={cn("flex flex-col gap-3 md:gap-4 lg:gap-4", isShortHeight && "gap-1 md:gap-1")}>
-            <span className={cn("text-base md:text-base lg:text-lg font-bold tracking-[0.2em] text-primary pl-1", isShortHeight && "text-sm md:text-sm lg:text-base")}>
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+              className={cn("text-base md:text-base lg:text-lg font-bold tracking-[0.2em] text-primary pl-1", isShortHeight && "text-sm md:text-sm lg:text-base")}
+            >
               {t("greeting")}
-            </span>
+            </motion.span>
             <h1 className={cn("text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-foreground drop-shadow-sm leading-none", isShortHeight && "text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl")}>
-              Lucas
-              <br />
-              <span className="text-foreground/90">Carvalho</span>
+              <SplitText
+                animation="slideUp"
+                delay={0.4}
+                staggerChildren={0.05}
+                duration={0.8}
+              >
+                Lucas
+              </SplitText>
+              <SplitText
+                animation="slideUp"
+                delay={0.7}
+                staggerChildren={0.05}
+                duration={0.8}
+                className="text-foreground/90"
+              >
+                Carvalho
+              </SplitText>
             </h1>
           </div>
 
-          <div className={cn("space-y-6 md:space-y-8 lg:space-y-8 xl:space-y-10 max-w-2xl", isShortHeight && "space-y-2 md:space-y-2 lg:space-y-3")}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2, ease: [0.25, 0.4, 0.25, 1] }}
+            className={cn("space-y-6 md:space-y-8 lg:space-y-8 xl:space-y-10 max-w-2xl", isShortHeight && "space-y-2 md:space-y-2 lg:space-y-3")}
+          >
             <h2 className={cn("text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl font-bold text-foreground", isShortHeight && "text-lg sm:text-xl md:text-lg lg:text-xl xl:text-2xl")}>
               {t("role")}
             </h2>
             <p className={cn("text-base md:text-base lg:text-lg xl:text-xl text-foreground/80 leading-relaxed max-w-xl font-medium", isShortHeight && "text-sm md:text-sm lg:text-base xl:text-lg")}>
               <HighlightedText text={t("description")} boldOnly />
             </p>
-          </div>
+          </motion.div>
 
-          <div className={cn("flex items-center gap-4 md:gap-3 lg:gap-4", isShortHeight && "gap-2 md:gap-2 lg:gap-3")}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4, ease: [0.25, 0.4, 0.25, 1] }}
+            className={cn("flex items-center gap-4 md:gap-3 lg:gap-4", isShortHeight && "gap-2 md:gap-2 lg:gap-3")}
+          >
             <SocialLinks variant="button" iconSize="md" includeWhatsapp={true} className={cn("gap-3 md:gap-3 lg:gap-4", isShortHeight && "gap-2 md:gap-2")} />
-          </div>
+          </motion.div>
 
-          <div className={cn("flex flex-wrap gap-4 md:gap-4 lg:gap-4 pt-4 md:pt-6 lg:pt-6", isShortHeight && "gap-2 md:gap-2 lg:gap-3 pt-1 md:pt-0.5 lg:pt-1")}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.6, ease: [0.25, 0.4, 0.25, 1] }}
+            className={cn("flex flex-wrap gap-4 md:gap-4 lg:gap-4 pt-4 md:pt-6 lg:pt-6", isShortHeight && "gap-2 md:gap-2 lg:gap-3 pt-1 md:pt-0.5 lg:pt-1")}
+          >
             <button
               onClick={(e) => {
                 e.preventDefault();
@@ -100,16 +132,15 @@ export const HeroSection = () => {
             </button>
 
             <a
-              href={`/CV - Lucas Carvalho Costa - ${locale}.pdf`}
-              target="_blank"
-              download
+              href={`/cv-${locale}.pdf`}
+              download={`CV-Lucas-Carvalho-${locale.toUpperCase()}.pdf`}
               className="inline-flex items-center gap-2 px-6 py-2.5 md:px-8 md:py-3 bg-card/50 border border-foreground/20 text-foreground rounded-lg font-bold transition-all hover:bg-foreground hover:text-background hover:scale-105 active:scale-95 backdrop-blur-sm"
             >
               <Download className="w-4 h-4" />
               {t("downloadCv")}
             </a>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         <HeroCard adjectives={adjectives} />
       </div>

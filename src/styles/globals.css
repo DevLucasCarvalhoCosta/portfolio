@@ -252,9 +252,77 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Optimize text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   ::selection {
     background-color: transparent;
     color: var(--primary);
   }
+}
+
+/* Performance Optimizations */
+/* GPU acceleration for fixed/sticky elements */
+[style*="position: fixed"],
+[style*="position: sticky"],
+.fixed,
+.sticky {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Contain paint for sections to reduce repaints */
+section {
+  contain: layout style;
+}
+
+/* Optimize transitions - use transform instead of expensive properties */
+.transition-smooth {
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.25, 0.4, 0.25, 1);
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Film Grain Animation - GPU Optimized */
+@keyframes grain {
+  0%, 100% { 
+    transform: translate3d(0, 0, 0); 
+  }
+  25% { 
+    transform: translate3d(-5%, -10%, 0); 
+  }
+  50% { 
+    transform: translate3d(5%, 5%, 0); 
+  }
+  75% { 
+    transform: translate3d(-3%, 8%, 0); 
+  }
+}
+
+.animate-grain {
+  animation: grain 4s steps(8) infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }

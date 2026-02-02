@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Palette } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";

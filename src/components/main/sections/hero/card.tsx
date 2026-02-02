@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { MapPin, Coffee, Eye } from "lucide-react";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
-import { SiNodedotjs, SiReact, SiLaravel, SiTypescript } from "@icons-pack/react-simple-icons";
+import { SiTypescript, SiReact, SiNodedotjs, SiPostgresql } from "@icons-pack/react-simple-icons";
 import { useEffect, useState } from "react";
 
 const MorphingText = dynamic(() => import("@/components/ui/morphing-text").then((mod) => mod.MorphingText), {
@@ -23,8 +23,7 @@ export const HeroCard = ({ adjectives }: HeroCardProps) => {
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - yearStarted;
 
-  // Calculate age from birthdate (December 15, 1996)
-  const birthDate = new Date(1996, 11, 15); // Month is 0-indexed, so 11 = December
+  const birthDate = new Date(1996, 3, 15);
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
   const monthDiff = today.getMonth() - birthDate.getMonth();
@@ -76,21 +75,21 @@ export const HeroCard = ({ adjectives }: HeroCardProps) => {
           }}
         >
           <div className="flex items-center gap-5 mt-6 z-20" style={{ transform: "translateZ(30px)" }}>
-            <SiNodedotjs 
+            <SiTypescript 
               className="w-8 h-8 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
-              title="Node.js"
+              title="TypeScript"
             />
             <SiReact 
               className="w-8 h-8 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
               title="React"
             />
-            <SiLaravel 
+            <SiNodedotjs 
               className="w-8 h-8 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
-              title="Laravel"
+              title="Node.js"
             />
-            <SiTypescript
+            <SiPostgresql
               className="w-8 h-8 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
-              title="TypeScript"
+              title="PostgreSQL"
             />
           </div>
 

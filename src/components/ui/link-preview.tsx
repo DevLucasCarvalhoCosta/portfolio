@@ -2,18 +2,18 @@
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 
 import { encode } from "qss";
-import React from "react";
+import { memo, useCallback, useMemo, useState, useEffect, type ReactNode, type MouseEvent } from "react";
 import {
   AnimatePresence,
   motion,
   useMotionValue,
   useSpring,
-} from "motion/react";
+} from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
 type LinkPreviewProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   url: string;
   className?: string;
   width?: number;
@@ -25,7 +25,7 @@ type LinkPreviewProps = {
   | { isStatic?: false; imageSrc?: never }
 );
 
-export const LinkPreview = ({
+export const LinkPreview = memo(({
   children,
   url,
   className,
@@ -36,43 +36,48 @@ export const LinkPreview = ({
   isStatic = false,
   imageSrc = "",
 }: LinkPreviewProps) => {
-  let src;
-  if (!isStatic) {
-    const params = encode({
-      url,
-      screenshot: true,
-      meta: false,
-      embed: "screenshot.url",
-      colorScheme: "dark",
-      "viewport.isMobile": true,
-      "viewport.deviceScaleFactor": 1,
-      "viewport.width": width * 3,
-      "viewport.height": height * 3,
-    });
-    src = `https://api.microlink.io/?${params}`;
-  } else {
-    src = imageSrc;
-  }
+  const src = useMemo(() => {
+    if (!isStatic) {
+      const params = encode({
+        url,
+        screenshot: true,
+        meta: false,
+        embed: "screenshot.url",
+        colorScheme: "dark",
+        "viewport.isMobile": true,
+        "viewport.deviceScaleFactor": 1,
+        "viewport.width": width * 3,
+        "viewport.height": height * 3,
+      });
+      return `https://api.microlink.io/?${params}`;
+    }
+    return imageSrc;
+  }, [url, width, height, isStatic, imageSrc]);
 
-  const [isOpen, setOpen] = React.useState(false);
+  const [isOpen, setOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-  const [isMounted, setIsMounted] = React.useState(false);
-
-  React.useEffect(() => {
+  useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  const springConfig = { stiffness: 100, damping: 15 };
+  // Spring config for smooth animation
+  const springConfig = { 
+    stiffness: 120, 
+    damping: 18,
+    restDelta: 0.001,
+    restSpeed: 0.001,
+  };
+  
   const x = useMotionValue(0);
-
   const translateX = useSpring(x, springConfig);
 
-  const handleMouseMove = (event: any) => {
-    const targetRect = event.target.getBoundingClientRect();
+  const handleMouseMove = useCallback((event: MouseEvent) => {
+    const targetRect = event.currentTarget.getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
-    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
+    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2;
     x.set(offsetFromCenter);
-  };
+  }, [x]);
 
   return (
     <>
@@ -118,14 +123,16 @@ export const LinkPreview = ({
                   scale: 1,
                   transition: {
                     type: "spring",
-                    stiffness: 260,
-                    damping: 20,
+                    stiffness: 280,
+                    damping: 22,
+                    restDelta: 0.001,
                   },
                 }}
                 exit={{ opacity: 0, y: 20, scale: 0.6 }}
                 className="shadow-xl rounded-xl"
                 style={{
                   x: translateX,
+                  willChange: "transform, opacity",
                 }}
               >
                 <a
@@ -139,6 +146,7 @@ export const LinkPreview = ({
                     height={height}
                     className="rounded-lg"
                     alt="preview image"
+                    loading="lazy"
                   />
                 </a>
               </motion.div>
@@ -148,4 +156,6 @@ export const LinkPreview = ({
       </HoverCardPrimitive.Root>
     </>
   );
-};
+});
+
+LinkPreview.displayName = "LinkPreview";

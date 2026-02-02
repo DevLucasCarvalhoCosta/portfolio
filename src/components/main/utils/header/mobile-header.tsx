@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 
 import { Menu, X } from "lucide-react";
 
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export function MobileHeader({ hidden, navItems }: MobileHeaderProps) {
     navItems[0]?.href ??
     null;
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
 

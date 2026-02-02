@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useEffect, useRef } from "react"
-import { motion, useMotionTemplate, useMotionValue } from "motion/react"
+import { memo, useEffect, useRef } from "react"
+import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion"
 import { useMagicCard } from "./magic-card-context"
 import { cn } from "@/lib/utils"
 
@@ -10,7 +10,15 @@ interface MagicCardProps {
   className?: string
 }
 
-export function MagicCard({
+// Spring config for smooth mouse following
+const springConfig = {
+  stiffness: 300,
+  damping: 30,
+  restDelta: 0.5,
+  restSpeed: 0.5,
+};
+
+function MagicCardInner({
   children,
   className,
 }: MagicCardProps) {
@@ -18,6 +26,10 @@ export function MagicCard({
   const cardRef = useRef<HTMLDivElement>(null)
   const mouseX = useMotionValue(-500)
   const mouseY = useMotionValue(-500)
+  
+  // Use springs for smoother interpolation
+  const smoothMouseX = useSpring(mouseX, springConfig)
+  const smoothMouseY = useSpring(mouseY, springConfig)
 
   useEffect(() => {
     if (cardRef.current && mousePosition.x !== -999) {
@@ -34,37 +46,43 @@ export function MagicCard({
     }
   }, [mousePosition.x, mousePosition.y, mouseX, mouseY])
 
+  // Memoize the gradient templates
+  const borderGradient = useMotionTemplate`
+    radial-gradient(500px circle at ${smoothMouseX}px ${smoothMouseY}px, 
+    color-mix(in oklch, var(--primary) 10%, transparent), 
+    transparent 65%)
+  `;
+  
+  const glowGradient = useMotionTemplate`
+    radial-gradient(800px 500px ellipse at ${smoothMouseX}px ${smoothMouseY}px, 
+    rgba(255, 255, 255, 0.004), 
+    transparent 65%)
+  `;
+
   return (
     <div ref={cardRef} className={cn("group relative overflow-hidden border border-primary/40 dark:border-primary/30", className)}>
       <div className="bg-background absolute inset-0 rounded-[inherit]" />
       <motion.div
         className="pointer-events-none absolute inset-0 rounded-[inherit]"
         style={{
-          background: useMotionTemplate`
-            radial-gradient(600px circle at ${mouseX}px ${mouseY}px, 
-            color-mix(in oklch, var(--primary) 12%, transparent), 
-            transparent 70%)
-          `,
+          background: borderGradient,
           WebkitMaskImage: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
           WebkitMaskComposite: 'xor',
           maskComposite: 'exclude',
           padding: '1px',
+          willChange: "background",
         }}
       />
       <motion.div
         className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-100"
         style={{
-          background: useMotionTemplate`
-            radial-gradient(1000px 600px ellipse at ${mouseX}px ${mouseY}px, 
-            rgba(255, 255, 255, 0.005), 
-            transparent 70%),
-            radial-gradient(600px circle at ${mouseX}px ${mouseY}px, 
-            rgba(255, 255, 255, 0.003), 
-            transparent 90%)
-          `,
+          background: glowGradient,
+          willChange: "background",
         }}
       />
       <div className="relative h-full">{children}</div>
     </div>
   )
 }
+
+export const MagicCard = memo(MagicCardInner);

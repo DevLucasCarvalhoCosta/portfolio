@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, type RefObject } from "react";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
@@ -17,7 +17,7 @@ interface DesktopHeaderProps {
   hidden: boolean;
   navItems: Array<{ href: string; label: string }>;
   activeSection: string;
-  isScrollingToSectionRef: React.RefObject<boolean>;
+  isScrollingToSectionRef: RefObject<boolean>;
 }
 
 export function DesktopHeader({ hidden, navItems, activeSection, isScrollingToSectionRef }: DesktopHeaderProps) {

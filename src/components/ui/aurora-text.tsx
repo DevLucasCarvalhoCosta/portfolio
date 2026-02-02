@@ -1,9 +1,9 @@
 "use client"
 
-import React, { memo } from "react"
+import { memo, type ReactNode } from "react"
 
 interface AuroraTextProps {
-  children: React.ReactNode
+  children: ReactNode
   className?: string
   colors?: string[]
   speed?: number

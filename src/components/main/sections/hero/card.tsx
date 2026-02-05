@@ -64,78 +64,78 @@ export const HeroCard = ({ adjectives }: HeroCardProps) => {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-      className="relative hidden lg:flex items-center justify-center lg:justify-end py-10"
+      className="relative hidden lg:flex items-start justify-center lg:justify-end mt-6 xl:mt-8"
     >
       <div className="relative group perspective-1000">
         <motion.div
-          className="relative w-[320px] min-h-[420px] md:w-[400px] md:min-h-[480px] bg-card/50 border border-border/50 rounded-3xl shadow-2xl p-8 pb-6 flex flex-col items-center"
+          className="relative w-[360px] xl:w-[420px] bg-card/50 border border-border/50 rounded-3xl shadow-2xl p-5 xl:p-6 flex flex-col items-center"
           style={{
             transform: "rotateY(-12deg) rotateX(5deg)",
             transformStyle: "preserve-3d",
           }}
         >
-          <div className="flex items-center gap-5 mt-6 z-20" style={{ transform: "translateZ(30px)" }}>
+          <div className="flex items-center gap-6 xl:gap-8 z-20" style={{ transform: "translateZ(30px)" }}>
             <SiTypescript 
-              className="w-8 h-8 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
+              className="w-8 h-8 xl:w-9 xl:h-9 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
               title="TypeScript"
             />
             <SiReact 
-              className="w-8 h-8 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
+              className="w-8 h-8 xl:w-9 xl:h-9 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
               title="React"
             />
             <SiNodedotjs 
-              className="w-8 h-8 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
+              className="w-8 h-8 xl:w-9 xl:h-9 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
               title="Node.js"
             />
             <SiPostgresql
-              className="w-8 h-8 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
+              className="w-8 h-8 xl:w-9 xl:h-9 opacity-80 cursor-default text-primary hover:opacity-100 transition-opacity" 
               title="PostgreSQL"
             />
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4 z-20 w-full px-4 mb-auto mt-6" style={{ transform: "translateZ(40px)" }}>
-            <div className="text-center space-y-3">
-              <div className="text-6xl md:text-7xl font-bold text-foreground">
+          <div className="flex flex-col items-center justify-center gap-3 xl:gap-4 z-20 w-full mb-auto mt-4 xl:mt-5" style={{ transform: "translateZ(40px)" }}>
+            <div className="text-center space-y-1.5 xl:space-y-2">
+              <div className="text-6xl xl:text-7xl font-bold text-foreground">
                 {age}
               </div>
-              <div className="text-sm font-medium text-foreground/90 uppercase tracking-widest">
+              <div className="text-sm xl:text-base font-medium text-foreground/90 uppercase tracking-widest">
                 {t("yearsOld")}
               </div>
-              <div className="flex items-center justify-center gap-1.5 text-sm text-foreground mt-3 bg-background/60 px-4 py-2 rounded-full border border-foreground/10 font-medium shadow-sm">
-                <MapPin className="w-3.5 h-3.5" />
+              <div className="flex items-center justify-center gap-1.5 text-sm xl:text-base text-foreground mt-1.5 xl:mt-2 bg-background/60 px-4 xl:px-5 py-1.5 xl:py-2 rounded-full border border-foreground/10 font-medium shadow-sm">
+                <MapPin className="w-4 h-4" />
                 Goiânia, GO - Brasil
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 w-full pt-6 border-t border-foreground/10">
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-2xl md:text-3xl font-bold text-primary">{yearsOfExperience}+</span>
-                <span className="text-xs text-foreground/70 uppercase tracking-wider font-semibold">{t("yrsXp")}</span>
+            <div className="grid grid-cols-3 gap-4 xl:gap-6 w-full pt-3 xl:pt-4 border-t border-foreground/10">
+              <div className="flex flex-col items-center gap-1 xl:gap-1.5">
+                <span className="text-2xl xl:text-3xl font-bold text-primary">{yearsOfExperience}+</span>
+                <span className="text-xs xl:text-sm text-foreground/70 uppercase tracking-wider font-semibold">{t("yrsXp")}</span>
               </div>
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-2xl md:text-3xl font-bold text-primary">
+              <div className="flex flex-col items-center gap-1 xl:gap-1.5">
+                <span className="text-2xl xl:text-3xl font-bold text-primary">
                   {visitorCount > 0 ? visitorCount.toLocaleString() : '...'}
                 </span>
-                <span className="text-xs text-foreground/70 uppercase tracking-wider font-semibold flex items-center gap-1">
-                  {t("visitors")} <Eye className="w-3.5 h-3.5" />
+                <span className="text-xs xl:text-sm text-foreground/70 uppercase tracking-wider font-semibold flex items-center gap-1">
+                  {t("visitors")} <Eye className="w-3.5 h-3.5 xl:w-4 xl:h-4" />
                 </span>
               </div>
-              <div className="flex flex-col items-center gap-2" title="Caffeine Level: High">
-                <span className="text-2xl md:text-3xl font-bold text-primary">∞</span>
-                <span className="text-xs text-foreground/70 uppercase tracking-wider font-semibold flex items-center gap-1">
-                  {t("coffees")} <Coffee className="w-3.5 h-3.5" />
+              <div className="flex flex-col items-center gap-1 xl:gap-1.5" title="Caffeine Level: High">
+                <span className="text-2xl xl:text-3xl font-bold text-primary">∞</span>
+                <span className="text-xs xl:text-sm text-foreground/70 uppercase tracking-wider font-semibold flex items-center gap-1">
+                  {t("coffees")} <Coffee className="w-3.5 h-3.5 xl:w-4 xl:h-4" />
                 </span>
               </div>
             </div>
           </div>
 
           <div
-            className="w-full pt-8 mt-auto z-20 flex justify-center"
+            className="w-full pt-2 xl:pt-3 z-20 flex justify-center"
             style={{ transform: "translateZ(60px)" }}
           >
             <MorphingText
               texts={adjectives}
-              className="text-2xl md:text-3xl font-bold text-primary h-12 md:h-16"
+              className="text-2xl xl:text-3xl font-bold text-primary h-8 xl:h-10"
             />
           </div>
 

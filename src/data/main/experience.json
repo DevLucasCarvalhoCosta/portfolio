@@ -3,18 +3,35 @@
     "company": "Manto Sistemas",
     "logo": "/experiences/Logo-Manto-Sistemas.jpg",
     "title": {
-      "pt": "Programador Júnior N1",
-      "en": "Junior Developer N1"
+      "pt": "Programador N2",
+      "en": "Software Developer N2"
     },
     "date": {
-      "pt": "Jun 2025 - o momento",
-      "en": "Jun 2025 - Present"
+      "pt": "Abr 2026 - o momento",
+      "en": "Apr 2026 - Present"
     },
     "description": {
-      "pt": "Atuação no desenvolvimento do ecossistema [[Manto Sistemas]], incluindo o [[ERP Litos]], [[Plataforma B2B]], [[Business Intelligence (BI)]], [[CRM interno]] e [[Integração de Mensagens]]. Desenvolvimento de [[interfaces responsivas]] e [[componentes reutilizáveis]] com [[React]], [[TypeScript]] e [[Ant Design]]. [[Integração com APIs RESTful]] e foco em [[performance]], [[usabilidade]] e [[boas práticas de código]].",
-      "en": "Working on the development of the [[Manto Sistemas]] ecosystem, including [[ERP Litos]], [[B2B Platform]], [[Business Intelligence (BI)]], [[internal CRM]], and [[Message Integration]]. Development of [[responsive interfaces]] and [[reusable components]] with [[React]], [[TypeScript]], and [[Ant Design]]. [[RESTful API integration]] with focus on [[performance]], [[usability]], and [[code best practices]]."
+      "pt": "Desenvolvimento de [[aplicações web escaláveis]] com [[TypeScript]], [[React]] e [[Node.js]], seguindo [[metodologias ágeis]]. Atuação em todo [[ecossistema Manto]]: [[ERP Litos]], [[Plataforma B2B]], [[Litos BI]], [[CRM]] e [[Litos Messages]], servindo como [[referência técnica]] e [[suporte]] para outros desenvolvedores. Implementação de [[integrações de APIs RESTful]], [[melhorias de performance]] e [[arquitetura de sistemas]].",
+      "en": "Development of [[scalable web applications]] using [[TypeScript]], [[React]], and [[Node.js]], following [[Agile methodologies]]. Working across the entire [[Manto ecosystem]]: [[Litos ERP]], [[B2B Platform]], [[Litos BI]], [[CRM]], and [[Litos Messages]], serving as [[technical reference]] and [[support]] for other developers. Implementation of [[RESTful API integrations]], [[performance improvements]], and [[system architecture]]."
     },
-    "skills": ["React", "TypeScript", "Ant Design", "APIs REST", "ERP", "B2B", "BI", "+"]
+    "skills": ["React", "TypeScript", "Node.js", "APIs REST", "ERP", "B2B", "BI", "+"]
+  },
+  {
+    "company": "Manto Sistemas",
+    "logo": "/experiences/Logo-Manto-Sistemas.jpg",
+    "title": {
+      "pt": "Programador N1",
+      "en": "Software Developer N1"
+    },
+    "date": {
+      "pt": "Jun 2025 - Mar 2026",
+      "en": "Jun 2025 - Mar 2026"
+    },
+    "description": {
+      "pt": "Desenvolvimento de [[aplicações web escaláveis]] com [[TypeScript]], [[JavaScript]], [[React]] e [[Node.js]], seguindo [[metodologias ágeis (Scrum)]]. Implementação de [[integrações de APIs RESTful]] e serviços de terceiros. Participação na [[refatoração do ERP Litos]] de software embarcado para versão web. Colaboração em [[sprints de desenvolvimento]] utilizando [[Git]], [[GitLab]] e práticas de [[CI/CD]].",
+      "en": "Development of [[scalable web applications]] using [[TypeScript]], [[JavaScript]], [[React]], and [[Node.js]], following [[Agile methodologies (Scrum)]]. Implementation of [[RESTful API integrations]] and third-party services. Participation in [[refactoring Litos ERP]] from embedded software to web version. Collaboration in [[development sprints]] using [[Git]], [[GitLab]], and [[CI/CD]] practices."
+    },
+    "skills": ["React", "TypeScript", "Ant Design", "APIs REST", "ERP", "Git", "CI/CD", "+"]
   },
   {
     "company": "UEG - Universidade Estadual de Goiás",
@@ -37,33 +54,33 @@
     "company": "Freelancer",
     "logo": "/experiences/Logo-Freelancer.jpg",
     "title": {
-      "pt": "Desenvolvedor Full Stack",
-      "en": "Full Stack Developer"
+      "pt": "Desenvolvedor Web Front-End",
+      "en": "Front-End Web Developer"
     },
     "date": {
       "pt": "2021 - 2023",
       "en": "2021 - 2023"
     },
     "description": {
-      "pt": "Desenvolvimento de [[soluções práticas]], alinhando [[tecnologia]] às necessidades específicas de cada cliente. Atuação em [[análise de requisitos]], [[arquitetura de sistemas]] e [[implementação de aplicações web]]. Foco em [[resolver problemas reais]] através de [[sistemas personalizados]], [[automações]] e [[integrações]] que otimizam processos e aumentam a produtividade.",
-      "en": "Development of [[practical solutions]] for businesses, aligning [[technology]] with each client's specific needs. Experience in [[requirements analysis]], [[system architecture]], and [[web application development]]. Focus on [[solving real problems]] through [[custom systems]], [[automations]], and [[integrations]] that optimize processes and increase productivity."
+      "pt": "Desenvolvimento de [[landing pages responsivas]] e [[sites institucionais]] utilizando [[HTML5]], [[CSS3]], [[JavaScript]] e [[React]]. Automação de processos de [[deploy]] e [[integração contínua (CI/CD)]] para projetos de clientes. Aplicação de técnicas de [[SEO]], [[otimização de performance]] e [[UX/UI design]].",
+      "en": "Development of [[responsive landing pages]] and [[institutional websites]] using [[HTML5]], [[CSS3]], [[JavaScript]], and [[React]]. Automation of [[deployment]] processes and [[continuous integration (CI/CD)]] for client projects. Application of [[SEO]] techniques, [[performance optimization]], and [[UX/UI design]]."
     },
-    "skills": ["Java", "Spring Boot", "JavaScript", "Python", "PostgreSQL", "APIs", "Automação", "+"]
+    "skills": ["HTML5", "CSS3", "JavaScript", "React", "SEO", "CI/CD", "UX/UI", "+"]
   },
   {
     "company": "SAS Com. Secos e Molhados (Rede Store)",
     "logo": "/experiences/Logo-RedeStore.jpg",
     "title": {
-      "pt": "Encarregado de CPD",
-      "en": "IT Data Center Manager"
+      "pt": "Encarregado de TI / Analista de Suporte",
+      "en": "IT Manager / Support Analyst"
     },
     "date": {
       "pt": "Fev 2014 - Jun 2025",
       "en": "Feb 2014 - Jun 2025"
     },
     "description": {
-      "pt": "Responsável pelo [[Centro de Processamento de Dados]] da rede de supermercados. [[Gerenciamento do sistema ERP]], garantindo integridade de dados de vendas, margens e estoque. [[Infraestrutura de TI]]: monitoramento de servidores, redes, PDVs, balanças e coletores. [[Manutenção preventiva e corretiva]] de computadores e equipamentos. [[Suporte técnico]] aos usuários e departamentos. [[Análise de dados]] e emissão de relatórios gerenciais.",
-      "en": "Responsible for the [[Data Processing Center]] of the supermarket chain. [[ERP system management]], ensuring data integrity for sales, margins, and inventory. [[IT Infrastructure]]: monitoring servers, networks, POS terminals, scales, and data collectors. [[Preventive and corrective maintenance]] of computers and equipment. [[Technical support]] to users and departments. [[Data analysis]] and management reports."
+      "pt": "Administração do [[sistema ERP]] garantindo [[integridade de dados]] e [[continuidade operacional]] (+11 anos). Gerenciamento de [[infraestrutura de TI]]: [[servidores]], [[redes]], [[PDVs]], [[periféricos]] e [[sistemas de automação comercial]]. Implementação de processos de [[carga de dados]], [[configuração de equipamentos]] e [[automação de rotinas]]. [[Suporte técnico N1/N2]], [[troubleshooting]] de hardware/software e [[treinamento de usuários]].",
+      "en": "[[ERP system]] administration ensuring [[data integrity]] and [[operational continuity]] (+11 years). [[IT infrastructure]] management: [[servers]], [[networks]], [[POS terminals]], [[peripherals]], and [[commercial automation systems]]. Implementation of [[data loading]] processes, [[equipment configuration]], and [[routine automation]]. [[N1/N2 technical support]], hardware/software [[troubleshooting]], and [[user training]]."
     },
     "skills": ["ERP", "Infraestrutura", "Redes", "Suporte TI", "Manutenção", "Análise de Dados", "Servidores", "+"]
   }

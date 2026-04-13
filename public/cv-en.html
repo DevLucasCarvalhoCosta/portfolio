@@ -23,7 +23,7 @@
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 11pt;
-      line-height: 1.4;
+      line-height: 1.3;
       color: #1a1a1a;
       background: #f8f8f8;
       -webkit-print-color-adjust: exact !important;
@@ -33,7 +33,7 @@
     .cv-page {
       width: 210mm;
       height: 297mm;
-      padding: 10mm 12mm;
+      padding: 8mm 12mm;
       background: #f8f8f8;
       margin: 0 auto;
       overflow: hidden;
@@ -54,13 +54,13 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 12px;
-      padding-bottom: 10px;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
       border-bottom: 2px solid #1a1a1a;
     }
     
     .header-name h1 {
-      font-size: 28pt;
+      font-size: 26pt;
       font-weight: 700;
       line-height: 1.0;
       margin: 0;
@@ -110,29 +110,29 @@
     
     /* Sections */
     .section {
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
     
     .section-title {
-      font-size: 11pt;
+      font-size: 10pt;
       font-weight: 700;
       color: #1a1a1a;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
       display: flex;
       align-items: center;
       gap: 6px;
       border-bottom: 1px solid #ccc;
-      padding-bottom: 3px;
+      padding-bottom: 2px;
     }
     
     .section-title .icon {
-      font-size: 14pt;
+      font-size: 12pt;
     }
     
     /* Experience */
     .experience-item {
       display: flex;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
     
     .experience-left {
@@ -172,14 +172,14 @@
       margin: 0;
       padding-left: 0;
       list-style: none;
-      font-size: 9pt;
+      font-size: 8.5pt;
       color: #333;
       text-align: justify;
     }
     
     .experience-right li {
-      margin-bottom: 1px;
-      padding-left: 12px;
+      margin-bottom: 0px;
+      padding-left: 10px;
       position: relative;
     }
     
@@ -192,12 +192,12 @@
     
     /* Education */
     .education-item {
-      margin-bottom: 5px;
+      margin-bottom: 3px;
     }
     
     .education-title {
       font-weight: 700;
-      font-size: 10pt;
+      font-size: 9pt;
     }
     
     .education-period {
@@ -215,23 +215,23 @@
     .skills-column {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 1px;
     }
     
     .skill-item {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 9pt;
+      gap: 8px;
+      font-size: 8.5pt;
     }
     
     .skill-name {
-      width: 75px;
+      width: 70px;
     }
     
     .skill-stars {
       letter-spacing: 1px;
-      font-size: 10pt;
+      font-size: 9pt;
     }
     
     /* Certifications */
@@ -239,14 +239,14 @@
       margin: 0;
       padding-left: 0;
       list-style: none;
-      font-size: 9pt;
+      font-size: 8.5pt;
       color: #333;
       text-align: justify;
     }
     
     .certifications li {
-      margin-bottom: 2px;
-      padding-left: 12px;
+      margin-bottom: 1px;
+      padding-left: 10px;
       position: relative;
     }
     
@@ -260,7 +260,7 @@
     .languages {
       display: flex;
       gap: 40px;
-      font-size: 9pt;
+      font-size: 8.5pt;
     }
     
     /* Print Button */
@@ -309,6 +309,12 @@
       </div>
     </header>
     
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title"><span class="icon">👤</span> PROFESSIONAL SUMMARY</h2>
+      <p style="font-size: 9pt; text-align: justify; color: #333;">Full-Stack Developer with hands-on experience building scalable web applications using React, TypeScript, Node.js, and PostgreSQL. Expertise in system architecture, RESTful APIs, and Agile methodologies (Scrum/Kanban) using Jira, Confluence, Bitbucket, and Sourcetree. Technical reference for development team, with strong skills in code review, technical support, and complex problem-solving. Oracle Cloud certified with experience in CI/CD, Docker, and Git version control.</p>
+    </section>
+
     <!-- Professional Experience -->
     <section class="section">
       <h2 class="section-title"><span class="icon">💼</span> PROFESSIONAL EXPERIENCE</h2>
@@ -316,15 +322,31 @@
       <div class="experience-item">
         <div class="experience-left">
           <p class="experience-company">Manto Sistemas</p>
-          <p class="experience-period">Jun 2025 – Present</p>
+          <p class="experience-period">Apr 2026 – Present</p>
         </div>
         <div class="experience-right">
-          <p class="experience-role">Junior Programmer N1</p>
+          <p class="experience-role">Software Developer N2</p>
           <ul>
-            <li><strong>Developed</strong> and maintained scalable web applications using TypeScript, JavaScript, and React.</li>
-            <li><strong>Worked</strong> across the Manto ecosystem: B2B Platform, Litos BI, CRM, and Litos Messages, integrated with Litos ERP.</li>
-            <li><strong>Participated</strong> in refactoring Litos ERP from embedded software to web version.</li>
-            <li><strong>Integrated</strong> RESTful APIs and third-party services to enhance functionalities.</li>
+            <li><strong>Develop</strong> scalable web applications using TypeScript, JavaScript, React, and Node.js, following Agile methodologies (Scrum).</li>
+            <li><strong>Work</strong> across the entire Manto ecosystem: B2B Platform, Litos BI, CRM, Litos Messages, and Litos ERP, serving as technical reference and support for other developers.</li>
+            <li><strong>Implement</strong> RESTful API integrations and third-party services, as well as performance and architectural improvements.</li>
+            <li><strong>Participate</strong> in refactoring Litos ERP from embedded software to web version, collaborating in sprints.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="experience-item">
+        <div class="experience-left">
+          <p class="experience-company">Manto Sistemas</p>
+          <p class="experience-period">Jun 2025 – Mar 2026</p>
+        </div>
+        <div class="experience-right">
+          <p class="experience-role">Software Developer N1</p>
+          <ul>
+            <li><strong>Developed</strong> scalable web applications using TypeScript, JavaScript, React, and Node.js, following Agile methodologies (Scrum).</li>
+            <li><strong>Implemented</strong> RESTful API integrations and third-party services, enhancing ecosystem functionalities.</li>
+            <li><strong>Participated</strong> in refactoring Litos ERP from embedded software to web version, modernizing the tech stack.</li>
+            <li><strong>Collaborated</strong> in development sprints using Git, GitLab, and CI/CD practices.</li>
           </ul>
         </div>
       </div>
@@ -335,12 +357,12 @@
           <p class="experience-period">Jan 2025 – Dec 2025</p>
         </div>
         <div class="experience-right">
-          <p class="experience-role">Project Manager & Full Stack Dev <span class="tag">(Extension Project)</span></p>
+          <p class="experience-role">Project Manager & Full Stack Developer <span class="tag">(Extension Project)</span></p>
           <ul>
-            <li><strong>Led</strong> PatrimônioUEG, an asset management system as a university extension project.</li>
-            <li><strong>Managed</strong> the project using Jira, Confluence, and Bitbucket (Atlassian ecosystem).</li>
-            <li><strong>Architected</strong> the system: RESTful API with JWT, dashboard with statistics, and batch import.</li>
-            <li><strong>Used</strong> React, TypeScript, Node.js, Express, TypeORM, and PostgreSQL.</li>
+            <li><strong>Led</strong> development team for PatrimônioUEG, a university asset management system.</li>
+            <li><strong>Managed</strong> full project lifecycle using Jira, Confluence, and Bitbucket (Scrum/Agile methodology).</li>
+            <li><strong>Architected</strong> RESTful API with JWT authentication, analytics dashboard, and batch data import.</li>
+            <li><strong>Tech Stack:</strong> React, TypeScript, Node.js, Express, TypeORM, PostgreSQL, and Docker.</li>
           </ul>
         </div>
       </div>
@@ -351,12 +373,12 @@
           <p class="experience-period">Feb 2014 – Jun 2025</p>
         </div>
         <div class="experience-right">
-          <p class="experience-role">IT Department Manager</p>
+          <p class="experience-role">IT Manager / Support Analyst</p>
           <ul>
-            <li><strong>Operated</strong> the ERP system, ensuring data integrity and system functionality.</li>
-            <li><strong>Monitored</strong> servers, networks, POS terminals, scales, label printers, and collectors.</li>
-            <li><strong>Managed</strong> price uploads, scale configuration, and checkout systems.</li>
-            <li><strong>Provided</strong> technical support to users and resolved software and hardware issues.</li>
+            <li><strong>Administered</strong> ERP system ensuring data integrity and operational continuity (+11 years).</li>
+            <li><strong>Managed</strong> IT infrastructure: servers, networks, POS terminals, peripherals, and commercial automation systems.</li>
+            <li><strong>Implemented</strong> data loading processes, equipment configuration, and routine automation.</li>
+            <li><strong>Provided</strong> N1/N2 technical support, hardware/software troubleshooting, and user training.</li>
           </ul>
         </div>
       </div>
@@ -367,10 +389,11 @@
           <p class="experience-period">2021 – 2023</p>
         </div>
         <div class="experience-right">
-          <p class="experience-role">Web Developer</p>
+          <p class="experience-role">Front-End Web Developer</p>
           <ul>
-            <li><strong>Developed</strong> landing pages and institutional websites for clients.</li>
-            <li><strong>Automated</strong> processes through scripts and integrations.</li>
+            <li><strong>Developed</strong> responsive landing pages and institutional websites using HTML5, CSS3, JavaScript, and React.</li>
+            <li><strong>Automated</strong> deployment processes and continuous integration (CI/CD) for client projects.</li>
+            <li><strong>Applied</strong> SEO techniques, performance optimization, and UX/UI design principles.</li>
           </ul>
         </div>
       </div>

@@ -22,7 +22,7 @@
     "hero": {
         "greeting": "Hello, I am",
         "role": "Full-Stack Developer",
-        "description": "Full-Stack Developer focused on building [[scalable]] and [[secure web applications]] using [[React]], [[TypeScript]], [[Node.js]], and [[relational databases]]. Solid experience in [[ERP systems]] and [[IT infrastructure management]]. [[Results-oriented]] profile with the ability to translate [[business needs]] into [[efficient technical solutions]].",
+        "description": "Full-Stack Developer focused on building [[scalable]] and [[secure web applications]] using [[React]], [[TypeScript]], [[Node.js]], and [[relational databases]]. Solid experience in [[Web development]], [[ERP systems]], and [[IT infrastructure management]]. [[Results-oriented]] profile with the ability to translate [[business needs]] into [[efficient technical solutions]].",
         "viewProjects": "View Projects",
         "downloadCv": "Download CV",
         "yearsOld": "Years Old",
